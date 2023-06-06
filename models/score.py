@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """This file holds the model for Scores"""
 
-
+from models.base_model import BaseModel
+from sqlalchemy import Column, String, Integer, Datetime, ForeignKey
+import datetime
 
 class Scores(BaseModel):
     """Class model of work"""

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This is the user class"""
 from sqlalchemy.ext.declarative import declarative_base
-from models.base_model import BaseModel, Base
+from models.BaseModel import BaseModel, Base
 from sqlalchemy import Table, Column, String, Integer, Boolean
 from sqlalchemy.orm import relationship
 import models
@@ -37,6 +37,6 @@ class User(BaseModel):
     phone_number = Column(String(11), nullable=False)
     password = Column(String(20), nullable=False)
     admin = Column(Boolean, nullable=False, default=False)
-    scores = relationship('scores', backref='user', cascade='all, delete, delete-orphan')
-    exams = relationship('exams', secondary=user_exam, viewonly=False, back_populates="user_exam")
+    scores = relationship('Score', backref='user', cascade='all, delete, delete-orphan')
+    exams = relationship('Exam', secondary=user_exam, viewonly=False, back_populates="user_exam")
 
