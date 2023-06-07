@@ -9,7 +9,7 @@ import models
 class Subject(BaseModel):
     """The namespace of the class model"""
 
-    __tablename__ = "subject"
+    __tablename__ = "subjects"
     exam_id = Column(String(60), ForeignKey="exams.id", nullable=False)
     name = Column(String(64), nullable=False)
     faculty = Column(String(64), nullable=False)
