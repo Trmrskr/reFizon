@@ -1,20 +1,11 @@
 #!/usr/bin/python3
 """This is the user class"""
 from sqlalchemy.ext.declarative import declarative_base
-from models.BaseModel import BaseModel, Base
-from sqlalchemy import Table, Column, String, Integer, Boolean
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, String, Integer, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
+from models.user_exam import user_exam
 import models
-
-user_exam = Table("user_exam", Base.metadata,
-                    Column("user_id", String(60),
-                            ForeignKey('users.id'),
-                            primary_key=True,
-                            nullable=False),
-                    Column("exam_id", String(60),
-                            ForeignKey('exams.id'),
-                            primary_key=True,
-                            nullable=False))
 
 
 
