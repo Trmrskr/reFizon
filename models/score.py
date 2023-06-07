@@ -14,4 +14,3 @@ class Scores(BaseModel):
     exam_id = Column(String(60), ForeignKey('exams.id'), nullable=False)
     subject_id = Column(String(60), ForeignKey('subjects.id'), nullable=False)
     score = Column(Integer, nullable=False, default=0)
-    timestamp = Column(Datetime, nullable=False, default=(datetime.utcnow()))
