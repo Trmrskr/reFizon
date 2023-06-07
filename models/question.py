@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This file holds the question class"""
-from models import BaseModel, Question
+from models.base_model import BaseModel
 from sqlalchemy import Column, ForeignKey, String, Integer
 from sqlalchemy.orm import relationship
 
