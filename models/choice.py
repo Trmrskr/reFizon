@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This file contains the class for choices/options"""
-from models import BaseModel, Question
+from models.base_model import BaseModel
+from models.question import Question
 from sqlalchemy import Column, String, ForeignKey
 
 
