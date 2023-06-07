@@ -12,7 +12,7 @@ Base = declarative_base()
 class BaseModel:
     """The class definition of the base model"""
 
-    id = Column(String(60), unique=True, nullable=False, Primary_key=True)
+    id = Column(String(60), unique=True, nullable=False, primary_key=True)
     created_at = Column(DateTime, nullable=False, default=(datetime.utcnow()))
     created_at = Column(DateTime, nullable=False, default=(datetime.utcnow()))
 
