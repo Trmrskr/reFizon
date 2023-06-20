@@ -2,57 +2,80 @@
 <html lang="en">
     <head>
         <title>reFizon - Your goto app for practicing past questions</title>
+        <link rel="stylesheet" href="./web_static/styles/common.css">
+        <link rel="stylesheet" href="./web_static/styles/header.css"> 
     </head>
     <body style="margin:0px;padding:0px;">
-        <h1>
-            reFizon
-        </h1>
-        <nav>
-            <a href="#">Features</a>
-            <a href="#">About</a>
-            <a href="#">Video</a>
-            <a href="#">Sign in</a>
-            <a href="#">Sign Up</a>
-        </nav>
+        <header>
+            <h1 id="logo">
+                reFizon
+            </h1>
+            <nav>
+                <div id="navigation">
+                    <a href="#">Features</a>
+                    <a href="#">About</a>
+                    <a href="#">Video</a>
+                </div>
+                <div id="register">
+                    <a href="#" class="buttoned">Sign in</a>
+                    <a href="#" class="buttoned greened">Sign Up</a>
+                </div>
+            </nav>
+        </header>
         <section id="intro">
-            <p>This is your one-stop spot to get past questions for any type of exam.</p>
-            <a href="#">Get past questions</a>
-            <a href="#">Take Mock test</a>
+            <div>
+                <article>
+                    <p>This is your one-stop spot to get past questions for any type of exam.</p>
+                    <div id="overlap-button">
+                        <a href="#" class="buttoned">Get past questions</a>
+                        <a href="#" class="greened">Take Mock test</a>
+                    </div>
+                </article>
+                <img src="./web_static/images/home-hero.png" alt="home-hero">
+            </div>
         </section>
         <section id="features">
-            <h3>Features</h3>
-            <img src="">
-            <ul>
-                <li>
-                    Practice the latest past questions from our reservoir of past questions
-                </li>
-                <li>
-                    Take a mock exam to assess your readiness for a real exam situation
-                </li>
-                <li>
-                    Review your progress using our progress tracker tools.
-                </li>
-            </ul>
+            <h2>Features</h2>
+            <div>
+                <img src="./web_static/images/features.png" alt="features">
+                <article>
+                    <ul>
+                        <li>
+                            Practice the latest past questions from our reservoir of past questions
+                        </li>
+                        <li>
+                            Take a mock exam to assess your readiness for a real exam situation
+                        </li>
+                        <li>
+                            Review your progress using our progress tracker tools.
+                        </li>
+                    </ul>
+                </article>
+            </div>
         </section>
         <section id="about">
-            <h3>About</h3>
-            <img src="">
+            <h2>About</h2>
             <div>
-                <p>
-                    Our mission is to make accessible past questions of notable examination
-                    bodies easily accessible for intending candidates and in so doing drive up the success rate of such candidates.
-                    To achieve this we are creating a bank of past questions which can easily be retrieved in times of need.
-                </p>
-                <p>
-                    This project is inspired by the inability of candidates to access questions of remote but reputable examination bodies.
-                </p>
+                <article>
+                    <p>
+                        Our mission is to make accessible past questions of notable examination
+                        bodies easily accessible for intending candidates and in so doing drive up the success rate of such candidates.
+                        To achieve this we are creating a bank of past questions which can easily be retrieved in times of need.
+                    </p>
+                    <p>
+                        This project is inspired by the inability of candidates to access questions of remote but reputable examination bodies.
+                    </p>
+                </article>
+                <img src="./web_static/images/about.png" alt="about">
             </div>
         </section>
         <section id="video">
-            <h3>Learn about our team and Inspiration</h3>
-            <video controls width="400px" height="300px">
-                <source src="https://drive.google.com/file/d/18qhaJByhrZDS8sxscs6f_IgLQftRyJS9/view?usp=sharing" type="video/mp4">
-            </video>
+            <h2>Learn about our team and Inspiration</h2>
+            <div>
+                <video controls height="400px">
+                    <source src="https://drive.google.com/file/d/18qhaJByhrZDS8sxscs6f_IgLQftRyJS9/view?usp=sharing" type="video/mp4">
+                </video>
+            </div>
         </section>
         <footer>
             <p>reFizon &copy</p>
