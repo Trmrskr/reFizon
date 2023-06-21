@@ -13,7 +13,6 @@ body {
     z-index: 0;
     font-size: 14px;
     font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 100%;
     color: #484848;
     display: flex;
     flex-direction: column;
@@ -26,8 +25,8 @@ a {
     padding-bottom: 20px;
     border-radius: 5px;
     color: #484848;
-    margin-left: 5px;
-    margin-right: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 a:hover {
     background-color: #484848;
@@ -48,7 +47,6 @@ a.greened:hover {
 section {
     height: 100vh;
     margin-top: 10px;
-    width: 100%;
     padding: 10px;
 }
 section > h2 {
@@ -67,14 +65,22 @@ div#overlap-button {
     margin-bottom: 25px;
 }
 section > div img {
-    max-width: 40%;
+    max-width: 45%;
     height: 100%;
 }
 section > div article {
-    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     max-width: 55%;
+}
+p#intro-text {
+    padding-top: 100px;
+}
+section > div article > p, li {
+    list-style-type: circle;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
 }
 section#video > div {
     width: 50%;

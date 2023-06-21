@@ -11,7 +11,7 @@ header h1#logo{
 }
 header nav {
     padding-top: 7px;
-    flex: 80%;
+    flex: 78%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
