@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """This file holds the model for Scores"""
 
-from models.base_model import BaseModel
-from sqlalchemy import Column, String, Integer, Datetime, ForeignKey
+from models.base_model import BaseModel, Base
+from sqlalchemy import Column, String, Integer, ForeignKey
 import datetime
 
-class Scores(BaseModel):
+class Score(BaseModel, Base):
     """Class model of work"""
 
     __tablename__ = "scores"
