@@ -2,14 +2,23 @@
 """This is the user class"""
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import BaseModel, Base
-from sqlalchemy import Column, String, Integer, Boolean, ForeignKey
+from sqlalchemy import Column, Table, String, Integer, Boolean, ForeignKey
 from sqlalchemy.orm import relationship
-from models.user_exam import user_exam
 import models
 
 
 
-class User(BaseModel):
+user_exam = Table("user_exam", Base.metadata,
+                    Column("user_id", String(60),
+                            ForeignKey("users.id"),
+                            primary_key=True,
+                            nullable=False),
+                    Column("exam_id", String(60),
+                            ForeignKey("exams.id"),
+                            primary_key=True,
+                            nullable=False))
+
+class User(BaseModel, Base):
     """
     This is the class for user
     Attributes:
@@ -29,5 +38,5 @@ class User(BaseModel):
     password = Column(String(20), nullable=False)
     admin = Column(Boolean, nullable=False, default=False)
     scores = relationship('Score', backref='user', cascade='all, delete, delete-orphan')
-    exams = relationship('Exam', secondary=user_exam, viewonly=False, back_populates="user_exam")
+    exams = relationship('Exam', secondary=user_exam, viewonly=False, back_populates="user_exams")
 

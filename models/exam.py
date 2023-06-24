@@ -1,16 +1,14 @@
 #!/usr/bin/python3
 """This file holds the exam model"""
 
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import String, Column, Integer
+from sqlalchemy import String, Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship
-from sqlalchemy import ForeignKey
-from models.base_model import BaseModel
-from models.user_exam import user_exam
+from models.base_model import BaseModel, Base
+from models.user import user_exam
 
 
 
-class Exam(BaseModel):
+class Exam(BaseModel, Base):
     """The class namespace of exam"""
     
 
