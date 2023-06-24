@@ -2,6 +2,13 @@
 """ The module manages the storage engine of the application"""
 
 from os import getenv
+from models.base_model import Base
+from models.user import User
+from models.exam import Exam
+from models.score import Score
+from models.subject import Subject
+from models.question import Question
+from models.choice import Choice
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy import (create_engine)
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,18 +19,22 @@ class DBStorage:
     __session = None
 
     def __init__(self):
-        user = getenv("REFIZON_MYSQL_USER")
-        passwd = getenv("REFIZON_MYSQL_PWD")
-        db = getenv("REFIZON_MYSQL_DB")
-        host = getenv("REFIZON_MYSQL_HOST")
-        env = getenv("REFIZON_ENV")
+#        user = getenv("REFIZON_MYSQL_USER")
+#        passwd = getenv("REFIZON_MYSQL_PWD")
+#        db = getenv("REFIZON_MYSQL_DB")
+#        host = getenv("REFIZON_MYSQL_HOST")
+#        env = getenv("REFIZON_ENV")
+        user = "refizon_test"
+        passwd = "refizon_test_pwd"
+        db = "refizon_db"
+        host = "localhost"
 
         self.__engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'
                                         .format(user, passwd, host, db),
                                         pool_pre_ping=True)
 
-        if env == "test":
-            Base.metadata.drop_all(self.__engine)
+#        if env == "test":
+        Base.metadata.drop_all(self.__engine)
 
     def all(self, cls=None):
         """returns a dictionary
