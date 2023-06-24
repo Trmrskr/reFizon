@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    z-index: 0;
+    font-size: 14px;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #484848;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+a {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    color: #484848;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+a:hover {
+    background-color: #484848;
+    color: #f4f4f4;
+}
+a.buttoned {
+    border: 1px solid #484848;
+}
+
+a.greened {
+    background-color: rgb(66, 128, 4);
+    color: #f4f4f4
+}
+a.greened:hover {
+    background-color: chartreuse;
+    color: #484848;
+}
+section {
+    height: 100vh;
+    margin-top: 10px;
+    padding: 10px;
+}
+section > h2 {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+section > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+div#overlap-button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+section > div img {
+    max-width: 45%;
+    height: 100%;
+}
+section > div article {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 55%;
+}
+p#intro-text {
+    padding-top: 100px;
+}
+section > div article > p, li {
+    list-style-type: circle;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
+}
+section#video > div {
+    width: 50%;
+    margin: auto;
+}
+section#video div video {
+    width: 100%;
+}
