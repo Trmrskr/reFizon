@@ -2,12 +2,12 @@
 """This file holds the class model Subject"""
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from models.exam import Exam
 
 
 
-class Subject(BaseModel):
+class Subject(BaseModel, Base):
     """The namespace of the class model"""
 
     __tablename__ = "subjects"
