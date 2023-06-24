@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """This file holds the question class"""
-from models.base_model import BaseModel
+from models.base_model import BaseModel, Base
 from sqlalchemy import Column, ForeignKey, String, Integer
 from sqlalchemy.orm import relationship
 
 
 
-class Question(BaseModel):
+class Question(BaseModel, Base):
     """The namespace of Question model"""
 
     __tablename__ = "questions"
